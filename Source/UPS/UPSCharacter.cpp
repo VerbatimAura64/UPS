@@ -65,6 +65,10 @@ void AUPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AUPSCharacter::Look);
+
+		//Sprinting
+		//EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Started, this, &ACharacter::Sprint);
+		//EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &ACharacter::StopSprinting);
 	}
 	else
 	{
@@ -125,6 +129,14 @@ void AUPSCharacter::DoJumpStart()
 	// signal the character to jump
 	Jump();
 }
+
+/*void AUPSCharacter::DoSprintStart() {
+	Sprint();
+}
+
+void AUPSCharacter::DoSprintEnd() {
+	StopSprinting();
+}*/
 
 void AUPSCharacter::DoJumpEnd()
 {
