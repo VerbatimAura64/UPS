@@ -127,6 +127,8 @@ void AUPSCharacter::DoLook(float Yaw, float Pitch)
 void AUPSCharacter::DoJumpStart()
 {
 	// signal the character to jump
+	//LastJumpPressedTime = GetGameTimeInSeconds;
+
 	Jump();
 }
 
